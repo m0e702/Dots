@@ -1,5 +1,4 @@
- 
- 
+
 ;             _       _                                   __ _       
 ; _ __   ___ | |_   _| |__   __ _ _ __    ___ ___  _ __  / _(_) __ _ 
 ;| '_ \ / _ \| | | | | '_ \ / _` | '__|  / __/ _ \| '_ \| |_| |/ _` |
@@ -41,19 +40,19 @@ radius = 0
 
 
 
-background =  	#17151e
+background = #161A1D
 foreground = #757575
-border-color = 	#17151e
+border-color = 	#161A1D
 fg-colour = #FFFFFF
 font-1 = "fuck:size=27;5"
 font-4 = fuck:size=27;5
 font-2 = "fuck:size=30;4"
-font-3 = Weather Icons:size=10;0  
+font-3 = Weather Icons:size=20;0  
 font-0 = "samsung sans:style=bold:size=15;5" 
  
-modules-left   =  
+modules-left   =  date
 modules-center = 
-modules-right  = date weather 
+modules-right  =   
 
 border-size = 10
 padding-left        = 0
@@ -72,7 +71,8 @@ type = internal/date
 interval = 30
 label =  %time%
 time =  %A, %d %B 
-format-padding   = 1
+format-padding   = 1 
+format-foreground = #BBBEC3
   
 
 
@@ -81,7 +81,7 @@ format-padding   = 1
 type = custom/script
 interval = 600
 format = <label>
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = #b82121
 format-foreground = #A9A9A9
 format-background =
@@ -89,6 +89,12 @@ exec = ./openweathermap-detailed.sh
 tail = true  
 format-padding  = 1 
   
-
+[module/files]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = #aaC5C9CC
+click-left = pcmanfm &
+click-right = pcmanfm &
 
 
