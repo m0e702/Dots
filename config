@@ -53,10 +53,10 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sleep 0.1 && bright
 ## colours
 
 # class                  border    bg        text      indicator   child_border
-client.focused           #17151E #17151E #FF5733   #17151E     #E98D05
-client.focused_inactive  #17151E #17151E #FF5733   #17151E     #E98D05
-client.unfocused         #17151E #17151E FF5733    #17151E     #E98D05
-client.urgent            #17151E #17151E #FF5733    #1f2126       #E98D05
+client.focused           #293236 #293236 #FF5733   #293236     #E98D05
+client.focused_inactive  #293236 #293236 #FF5733   #293236     #E98D05
+client.unfocused         #293236 #293236 FF5733    #293236     #E98D05
+client.urgent            #293236 #293236 #FF5733    #1f2126       #E98D05
 
 
 
