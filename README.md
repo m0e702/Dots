@@ -1,3 +1,3 @@
 # Dots
 Scripts Configs And Other Cool Stuff
-![](wall/hello_world.png)
+![](wall/m0e.png)
