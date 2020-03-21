@@ -1,0 +1,349 @@
+ 
+;             _       _                                   __ _       
+; _ __   ___ | |_   _| |__   __ _ _ __    ___ ___  _ __  / _(_) __ _ 
+;| '_ \ / _ \| | | | | '_ \ / _` | '__|  / __/ _ \| '_ \| |_| |/ _` |
+;| |_) | (_) | | |_| | |_) | (_| | |    | (_| (_) | | | |  _| | (_| |
+;| .__/ \___/|_|\__, |_.__/ \__,_|_|     \___\___/|_| |_|_| |_|\__, |
+;|_|            |___/                                          |___/ 
+
+   
+    
+     
+     
+[colors]
+bg = #8F04AE
+fg = #8F04AE
+
+red = #FFFFFF
+grn = #0D1516
+ylw = #292927
+blu = #292927
+mag = #292927
+cyn = #292927
+wht = #FFFFFF
+bblk = #000000
+
+[global/wm]
+margin-top        = 20
+margin-bottom     = 20
+override-redirect = true
+
+[bar/top]
+monitor = VGA-1 
+monitor-fallback = DP-2
+width    = 100%
+height   = 30
+offset-x = 0
+offset-y = 0 
+line-size = 5
+radius = 0
+
+
+
+background =  	#17151e
+foreground = #757575
+border-color = 	#17151e
+fg-colour = #FFFFFF
+font-1 = "fuck:size=27;5"
+font-4 = fuck:size=27;5
+font-2 = "fuck:size=30;4"
+font-3 = Weather Icons:size=10;0  
+font-0 = "samsung sans:style=bold:size=15;5" 
+ 
+modules-left   =  
+modules-center = 
+modules-right  = date weather 
+
+border-size = 10
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
+module-margin-center = 10
+
+bottom = true
+
+[module/network]
+type          = internal/network
+interface     = wlp2s0
+ping-interval = 30
+
+[module/memory]
+type = internal/memory
+interval = 5
+format = "%{F#6D6D6D}%{F-} <label>"
+format-fg-colour = #D7424F
+label = %percentage_used%% 
+format-padding           = 1
+
+
+ 
+[module/time]
+type                     = internal/date
+interval                 = 30
+date                     = %H:%M
+ format-prefix            = 
+format-prefix-foreground = #CD5DF1
+format-background = #1F1F1F
+format-foreground = #A2BCAE
+format-padding   = 1
+ 
+[module/date]
+type = internal/date
+interval = 30
+label =  %time%
+time =  %A, %d %B 
+format-padding   = 1
+  
+[module/browser]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = #aaC5C9CC
+click-left = chromium &
+click-right = chromium-web & 
+ 
+[module/spacer]
+type = custom/text
+content = ∣
+content-foreground = #cc414458
+content-padding = 1
+
+ 
+[module/mail]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground =  #73BD9E
+click-left = xdg-open https://mail.google.com/mail/u/0/#inbox 
+line-size = 0
+
+ 
+[module/reddit]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = #AA0017
+click-left = xdg-open https://www.reddit.com/r/unixporn/ 
+ 
+[module/title]
+type = internal/xwindow
+label = ..%title%..
+label-maxlen = 14 
+line-size = 4  
+content-foreground = #BC92F8
+
+
+
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = true
+strip-wsnumbers = true
+label-mode = %mode%
+label-mode-padding = 3
+label-mode-foreground = #000
+label-mode-background = #252B36
+label-focused = %icon%
+label-focused-background = #0E0E0E
+label-focused-foreground = #FFFFFF
+label-focused-padding = 3
+label-unfocused = %icon%
+label-unfocused-foreground = #3b444b
+label-unfocused-padding = 3
+label-visible = %icon%
+label-visible-background = #0E0E0E
+label-visible-padding = 20
+label-urgent = %icon%
+label-urgent-background = 
+label-urgent-foreground = #064E71
+label-urgent-padding = 1
+format-foreground = #A0A0A0
+format-background = #0E0E0E
+label-focused-underline=  
+
+ws-icon-1 = "1;"
+ws-icon-2 = "2;"
+ws-icon-3 = "3;"
+ws-icon-4 = "4;"
+ws-icon-5 = "5;"
+ws-icon-6 = "6;"
+ws-icon-0 = "7;"
+
+
+[module/weather]
+type = custom/script
+interval = 600
+format = <label>
+format-prefix = 
+format-prefix-foreground = #b82121
+format-foreground = #A9A9A9
+format-background =
+exec = ./openweathermap-detailed.sh
+tail = true  
+format-padding  = 1 
+  
+[module/files]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = #aaC5C9CC
+click-left = pcmanfm &
+click-right = pcmanfm &
+
+
+
+
+[module/rmenu]
+type = custom/text
+content = 
+format-margin = 5
+content-background = #0C121B
+content-foreground = #A9A9A9
+click-left = rofi -show drun 
+click-right = rofi -show drun  
+line-size = 4
+ 
+[module/volume]
+type = internal/pulseaudio
+
+format-volume-margin = 0
+format-volume-padding = 2
+format-volume-background = #1F1F1F
+format-volume = <ramp-volume> <bar-volume>
+
+format-muted-margin = 1
+format-muted-padding = 0
+format-muted-background = #090E13
+format-muted = <label-muted> <bar-volume>
+
+label-muted = 
+label-muted-foreground = #feed71
+
+bar-volume-width = 7
+bar-volume-indicator = 
+bar-volume-indicator-foreground = 
+bar-volume-fill = 
+
+bar-volume-fill-foreground = #4A7F71
+bar-volume-empty = 
+bar-volume-empty-foreground = #aaC5C9CC
+
+ramp-volume-0 =  
+ramp-volume-1 =  
+ramp-volume-2 =  
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+
+
+[module/custom]
+type = custom/text
+content = 
+content-padding = 4
+content-background = #0C121B
+content-foreground = #FFCC80
+
+[module/firefox]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = N#aaC5C9CC
+
+[module/custom1]
+type = custom/text
+content =  
+content-padding = 0
+content-foreground = #A0A0A0 
+click-left = rofi -show drun 
+click-right = rofi -show drun  
+ 
+[module/essid]
+inherit = module/network
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+format-connected-prefix     = ""
+format-disconnected-prefix  = ""
+
+format-connected-background = #1F1F1F
+format-disconnected-background = ${colors.cyn}
+format-connected-foreground = #6D6D6D
+format-disconnected-foreground = #FFFFFF
+label-connected             = " online"
+label-disconnected          = " disconnected"
+
+format-connected-padding     = 2
+format-disconnected-padding  = 2
+; format-connected-prefix-foreground     = ${colors.cyn}
+; format-disconnected-prefix-foreground  = ${colors.cyn}
+
+[module/battery]
+type          = internal/battery
+full-at       = 98
+battery       = BAT1
+adapter       = AC0
+poll-interval = 5
+
+format-charging-prefix      = ""
+format-discharging-prefix   = ""
+format-full-prefix          = ""
+
+label-charging      = " %percentage%% "
+label-discharging   = " %percentage%% "
+label-full          = " %percentage%% "
+
+format-charging-padding = 1
+format-discharging-padding = 3
+format-full-padding    = 1
+
+format-charging-background      = #1F1F1F
+format-discharging-background   = #1F1F1F
+format-full-background          = #1F1F1F
+format-charging-foreground      = #6D6D6D
+format-discharging-foreground   = #FFFFFF
+format-full-foreground          = #4cbdfc
+
+format-charging-prefix-foreground = #a2a1c7
+ format-discharging-prefix-foreground = #064E71
+; format-full-prefix-foreground    = ${colors.red
+
+[module/bell]
+type = custom/text
+content =
+content-padding = 2
+content-foreground = #73BD9E
+format-prefix-foreground = #
+click-left = rofi -show drun 
+click-right = rofi -show drun   
+ 
+[module/wifi]
+type = custom/text
+content =  TalkTalk
+content-padding = 0
+content-foreground = #6E65AD
+click-left = ./wifi.sh
+click-right = ./wifi.sh
+ 
+[module/term]
+type = custom/text
+content = 
+content-padding = 4
+content-foreground = #D1D1D1
+content-background = #0C1116
+ 
+ 
+[module/power]
+type = custom/text
+content = 
+content-padding = 0
+content-foreground = #D1D1D1
+click-left = ./pmenu_g
+click-right = ./pmenu_g 
+ 
+
+
