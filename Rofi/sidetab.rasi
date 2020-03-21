@@ -1,0 +1,85 @@
+configuration {
+  display-drun:    "Apps";
+  display-run:     "Execute";
+  show-icons:      true;  
+  sidebar-mode:    true;
+  font: "samsung sans 15";
+  font: "samsung sans 15";
+  font: "samsung sans  15";
+  fullscreen: false;
+  show-icons: true;
+}
+ 
+* {
+  background-color: #17151e;
+  text-color: #6D6D6D;
+}
+ 
+window {
+  background-color: #0C121B;
+  location: northwest;
+  width: 506px;
+  height: 537px;
+  anchor: northwest; 
+  x-offset:  0;
+  y-offset:  440;
+
+}
+ 
+
+mainbox {
+  children: [ listview, inputbar ];
+  padding: 20px 20px 20px 20px;
+}
+ 
+istview {
+  columns: 1;
+  spacing: 2;
+  dynamic: false;
+  padding: 0 0 0 0;
+}
+element {
+  border-radius: 4;
+  orientation: vertical;
+  padding: 20 0 20 0;
+}
+ 
+element selected {
+  /* background-color: #A9A9A9 ; */
+  background-color: #A9A9A9 ;
+  text-color: #235160;
+  transition: 20;
+}
+ 
+element-icon {
+  size: 70;
+}
+ 
+element-text {
+  horizontal-align: 0.5;
+  padding: 5 0 0 0;
+  text-color: inherit;
+}
+ 
+inputbar {
+  background-color: #A9A9A9;
+  border-radius: 7;
+  margin: 0 0;
+  padding: 10 10;
+  position: south;
+  width: 200;
+}
+ 
+prompt {
+  background-color: #A9A9A9;
+  padding: 8px;
+  border-radius: 50% 0 0 50%;
+  text-color: #D33939;
+  enabled: true;
+}
+ 
+entry {
+  font: "samsung sans   25";
+  border-radius: 0 50% 50% 0;
+  background-color: #A9A9A9 ;
+}
