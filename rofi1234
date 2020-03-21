@@ -1,0 +1,10 @@
+window {
+  background-color:#131520 ;
+  location: northwest;
+  width: 506px;
+  height: 100px;
+  anchor: northwest; 
+  x-offset:  0;
+  y-offset:  925;
+
+}
