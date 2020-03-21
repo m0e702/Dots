@@ -89,12 +89,6 @@ exec = ./openweathermap-detailed.sh
 tail = true  
 format-padding  = 1 
   
-[module/files]
-type = custom/text
-content = 
-content-padding = 4
-content-foreground = #aaC5C9CC
-click-left = pcmanfm &
-click-right = pcmanfm &
+
 
 
