@@ -40,9 +40,9 @@ radius = 0.0
 
 
 
-background =  	#17151e
+background = #161A1D
 foreground = #757575
-border-color = 	#17151e
+border-color = #161A1D
 fg-colour = #FFFFFF
 font-1 = hola:size=31;7
 font-4 = kanem:size=27;4 
@@ -52,7 +52,7 @@ font-0 = "iosevka custom:style=bold:size=14;5"
  
 modules-left   =   custom1 i3 
 modules-center = 
-modules-right  =  volume spacer bell spacer wifi spacer  mail spacer  time spacer   
+modules-right  =  volume spacer bell spacer wifi spacer  mail spacer  time spacer gmail
 
 border-size = 5
 padding-left        = 0
@@ -113,18 +113,18 @@ content-padding = 1
 [module/mail]
 type = custom/text
 content = 
-content-padding = #D1D1D1
-content-foreground =  
-click-left = ./menu_apps.sh
+content-padding = 
+content-foreground =  #293236
+click-left = ./launcher.sh
 line-size = 4 
 
  
-[module/reddit]
+[module/gmail]
 type = custom/text
-content = 
-content-padding = 4
-content-foreground = #AA0017
-click-left = xdg-open https://www.reddit.com/r/unixporn/ 
+content = 
+content-padding = 0
+content-foreground = #293236
+click-left = xdg-open https://mail.google.com/mail/u/0/#inbox
  
 [module/title]
 type = internal/xwindow
@@ -167,10 +167,10 @@ label-mode-foreground = #000
 label-mode-background = #1E2326
 label-focused = %icon%
 label-focused-background = 
-label-focused-foreground = #4A84C9
+label-focused-foreground = #274C82
 label-focused-padding = 2
 label-unfocused = %icon%
-label-unfocused-foreground = #A0A0A0
+label-unfocused-foreground = #373B41
 label-unfocused-padding = 2
 label-visible = %icon%
 label-visible-background = 
@@ -179,7 +179,7 @@ label-urgent = %icon%
 label-urgent-background = 
 label-urgent-foreground = #064E71
 label-urgent-padding = 1
-format-foreground = #A0A0A0
+format-foreground = #9A1C1F
 format-background = #F1F1F 
 label-focused-underline= 
 
@@ -244,7 +244,7 @@ bar-volume-indicator =
 bar-volume-indicator-foreground = A90017
 bar-volume-fill = "█"
 
-bar-volume-fill-foreground = #4A84C9
+bar-volume-fill-foreground = #293236
 bar-volume-empty = "█"
 bar-volume-empty-foreground = #606060
 
@@ -274,9 +274,9 @@ content-foreground = N#aaC5C9CC
 type = custom/text
 content = 
 content-padding = 0
-content-foreground = #8b8a8f
-click-left = rofi -show drun 
-click-right = rofi -show drun  
+content-foreground = #274C82
+click-left = rofi -show drun -theme sidetab.rasi
+click-right = rofi -show drun -theme sidetab.rasi
  
 [module/essid]
 inherit = module/network
@@ -333,16 +333,16 @@ format-charging-prefix-foreground = #a2a1c7
 type = custom/text
 content =
 content-padding = 0
-content-foreground = #9FA8DA
-format-prefix-foreground = #
-click-left = ./quicklinks.sh
+content-foreground = #293236
+format-prefix-foreground = 
+click-left = ./launcher.sh
 click-right = rofi -show drun   
  
 [module/wifi]
 type = custom/text
 content = 
 content-padding = 0
-content-foreground = #D1D1D1
+content-foreground = #293236
 click-left = ./wifi.sh
 click-right = ./wifi.sh
  
