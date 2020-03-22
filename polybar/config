@@ -47,8 +47,8 @@ fg-colour = #FFFFFF
 font-1 = hola:size=31;7
 font-4 = kanem:size=27;4 
 font-2 = kanem:size=29;6
-font-3 = kanem:size=27;4 
-font-0 = "iosevka custom:style=bold:size=14;5" 
+font-0 = "Chunky Wally:size=18;5" 
+font-3 = "iosevka custom:style=bold:size=14;5" 
  
 modules-left   =   custom1 i3 
 modules-center = 
@@ -85,7 +85,7 @@ date                     = %H:%M
  format-prefix            = 
 format-prefix-foreground = #CD5DF1
 format-background = #1F1F1F
-format-foreground = #ECEFF1
+format-foreground = #274C82
 format-padding   = 1
  
 [module/date]
