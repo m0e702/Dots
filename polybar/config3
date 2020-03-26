@@ -40,9 +40,9 @@ radius = 0
 
 
 
-background = #161A1D
+background = #030304
 foreground = #757575
-border-color = 	#161A1D
+border-color = #030304
 fg-colour = #FFFFFF
 font-1 = "fuck:size=27;5"
 font-4 = fuck:size=27;5
@@ -54,7 +54,7 @@ modules-left   =  date
 modules-center = 
 modules-right  =   
 
-border-size = 10
+border-size = 5
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -72,7 +72,7 @@ interval = 30
 label =  %time%
 time =  %A, %d %B 
 format-padding   = 1 
-format-foreground = #BBBEC3
+format-foreground = #B1B5B8
   
 
 

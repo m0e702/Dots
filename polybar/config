@@ -35,24 +35,24 @@ width    = 100%
 height   = 43
 offset-x = 0
 offset-y = 0 
-line-size = 8
+line-size = 0
 radius = 0.0
 
 
 
-background = #161A1D
+background = #030304
 foreground = #757575
-border-color = #161A1D
+border-color = #030304
 fg-colour = #FFFFFF
 font-1 = hola:size=31;7
 font-4 = kanem:size=27;4 
 font-2 = kanem:size=29;6
 font-0 = "Chunky Wally:size=18;5" 
-font-3 = "iosevka custom:style=bold:size=14;5" 
+font-3 = "iosevka custom:style=bold:size=12;5" 
  
-modules-left   =   custom1 i3 
+modules-left   =   custom1 i3
 modules-center = 
-modules-right  =  volume spacer bell spacer wifi spacer  mail spacer  time spacer gmail
+modules-right  =  volume spacer bell spacer wifi spacer  mail spacer  time spacer 
 
 border-size = 5
 padding-left        = 0
@@ -83,9 +83,9 @@ type                     = internal/date
 interval                 = 30
 date                     = %H:%M
  format-prefix            = 
-format-prefix-foreground = #CD5DF1
+format-prefix-foreground = #A1A85E
 format-background = #1F1F1F
-format-foreground = #274C82
+format-foreground = #B1B5B8
 format-padding   = 1
  
 [module/date]
@@ -114,7 +114,7 @@ content-padding = 1
 type = custom/text
 content = 
 content-padding = 
-content-foreground =  #293236
+content-foreground =  #606060
 click-left = ./launcher.sh
 line-size = 4 
 
@@ -162,26 +162,26 @@ index-sort = true
 wrapping-scroll = true
 strip-wsnumbers = true
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 3
 label-mode-foreground = #000
 label-mode-background = #1E2326
 label-focused = %icon%
 label-focused-background = 
-label-focused-foreground = #274C82
-label-focused-padding = 2
+label-focused-foreground = #263938
+label-focused-padding = 3
 label-unfocused = %icon%
 label-unfocused-foreground = #373B41
-label-unfocused-padding = 2
+label-unfocused-padding = 3
 label-visible = %icon%
 label-visible-background = 
 label-visible-padding = ${self.label-focused-padding}
 label-urgent = %icon%
 label-urgent-background = 
-label-urgent-foreground = #064E71
-label-urgent-padding = 1
+label-urgent-foreground = #f0f8ff
+label-urgent-padding = 3
 format-foreground = #9A1C1F
-format-background = #F1F1F 
-label-focused-underline= 
+format-background = 
+label-focused-underline= #f0f8ff
 
 ws-icon-1 = "1;"
 ws-icon-2 = "2;"
@@ -239,18 +239,18 @@ format-muted = <label-muted> <bar-volume>
 label-muted = 
 label-muted-foreground = #7b76a3
 
-bar-volume-width = 9
+bar-volume-width = 8
 bar-volume-indicator =  
 bar-volume-indicator-foreground = A90017
-bar-volume-fill = "█"
+bar-volume-fill = "▍"
 
-bar-volume-fill-foreground = #293236
-bar-volume-empty = "█"
+bar-volume-fill-foreground = #263938
+bar-volume-empty = "▍"
 bar-volume-empty-foreground = #606060
 
-ramp-volume-0 =    
-ramp-volume-1 =    
-ramp-volume-2 =    
+ramp-volume-0 =    
+ramp-volume-1 =    
+ramp-volume-2 =    
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -274,7 +274,7 @@ content-foreground = N#aaC5C9CC
 type = custom/text
 content = 
 content-padding = 0
-content-foreground = #274C82
+content-foreground = #263938
 click-left = rofi -show drun -theme sidetab.rasi
 click-right = rofi -show drun -theme sidetab.rasi
  
@@ -331,20 +331,35 @@ format-charging-prefix-foreground = #a2a1c7
 
 [module/bell]
 type = custom/text
-content =
+content = 
 content-padding = 0
-content-foreground = #293236
+content-foreground = #606060
 format-prefix-foreground = 
 click-left = ./launcher.sh
 click-right = rofi -show drun   
  
 [module/wifi]
-type = custom/text
-content = 
-content-padding = 0
-content-foreground = #293236
-click-left = ./wifi.sh
-click-right = ./wifi.sh
+type = internal/cpu
+interval = 0.5
+format = <label> <bar-load>
+label = 
+
+
+
+bar-load-width = 5
+bar-load-foreground-0 = #263938
+bar-load-foreground-1 = #263938
+bar-load-foreground-2 = #263938
+bar-load-foreground-3 = #263938
+bar-load-indicator = ▉
+bar-load-indicator-font = 0
+bar-load-indicator-foreground = #263938
+bar-load-fill = ▉
+bar-load-fill-font = 0
+bar-load-empty = ▉
+bar-load-empty-font = 0
+bar-load-empty-foreground = #99586e75
+
  
 [module/term]
 type = custom/text
@@ -359,8 +374,8 @@ type = custom/text
 content = 
 content-padding = 0
 content-foreground = #D1D1D1
-click-left = ./menu_powermenu.sh
-click-right = ./menu_powermenu.sh 
+click-left = ./powermenu.sh
+click-right = ./powermenu.sh 
 
 
  
